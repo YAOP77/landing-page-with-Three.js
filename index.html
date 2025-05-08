@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+    <title>Future Pro Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="section" id="banner">
+        <div class="banner-center">
+            <h1>Tu rêves de devenir footballeur professionnel&nbsp;?</h1>
+            <p>Fais le premier pas aujourd'hui.</p>
+            <a href="#intro" class="cta-btn">Découvrir</a>
+        </div>
+    </div>
+    <div class="section" id="intro">
+        <div class="content-fit">
+            <div class="des">
+              <h2>Devenez un joueur professionnel</h2>
+              <!-- <div class="title">
+              </div> -->
+              <p>Future Pro Player est votre plateforme dédiée à la formation des futurs talents du football. Notre programme d'entraînement innovant combine expertise technique, préparation physique et développement mental pour façonner les champions de demain. Rejoignez notre académie et donnez vie à votre rêve de devenir un joueur professionnel.</p>
+                <a href="#description" class="cta-btn">Notre programme</a>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="description">
+        <div class="content-fit">
+            <div class="des">
+              <h2>NOTRE PROGRAMME</h2>
+                <!-- <div class="title">
+                </div> -->
+                <p>Notre programme d'excellence comprend un entraînement personnalisé, des analyses vidéo détaillées, des sessions de tactique avancées et un suivi nutritionnel complet. Nos entraîneurs certifiés UEFA travaillent avec les dernières technologies pour optimiser votre développement. Nous offrons également des opportunités de repérage par des clubs professionnels et des stages d'essai.</p>
+                <a href="#inscription" class="cta-btn">Créer un compte</a>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="inscription">
+        <div class="content-fit inscription-flex">
+            <div class="register-form-container">
+                <div class="register-form-title">Créer mon compte</div>
+                <form class="register-form" id="playerForm" autocomplete="off">
+                    <label for="nomcomplet">Nom complet</label>
+                    <input type="text" name="nomcomplet" id="nomcomplet" placeholder="Votre nom complet" required />
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Votre email" required />
+                    <label for="password">Mot de passe</label>
+                    <input type="password" name="password" id="password" placeholder="Mot de passe" required />
+                    <button type="submit" class="cta-btn">S'inscrire</button>
+                    <div class="form-success" id="formSuccess">Inscription réussie ! Nous vous contacterons prochainement.</div>
+                </form>
+            </div>
+            <div class="inscription-message">
+                <h2>Réaliser son rêve c'est vouloir faire partie de notre plateforme inscrivez-vous</h2>
+            </div>
+        </div>
+    </div>
+</body>
+
+<div id="container3D"></div>
+<script type="module" src="script.js"></script>
+<script>
+// Affichage message succès formulaire (visuel uniquement)
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('playerForm');
+    const success = document.getElementById('formSuccess');
+    if(form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            success.style.display = 'block';
+            setTimeout(() => { success.style.display = 'none'; form.reset(); }, 3500);
+        });
+    }
+});
+</script>
+</html>
