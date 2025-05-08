@@ -22,7 +22,7 @@ const positions = [
   {id: 'inscription', pos: {x:0.8, y:-1, z:0}, rot: {x:0.3, y:-0.5, z:0}}
 ];
 
-new GLTFLoader().load('/bouncing_soccer_ball.glb', gltf => {
+new GLTFLoader().load('bouncing_soccer_ball.glb', gltf => {
   bee = gltf.scene;
   bee.scale.set(10, 10, 10);
   scene.add(bee);
